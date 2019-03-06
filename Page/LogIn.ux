@@ -1,0 +1,44 @@
+<Panel ux:Class="LogIn">
+	<Router ux:Dependency="router" />	
+	<JavaScript File="LogInjs.js" />
+
+	<StackPanel>
+		<Rectangle Width="200" Height="50" Color="#E2E2E2" Y="110">
+			<TextInput Row="0" Column="1" PlaceholderText="ID를 입력하세요." PlaceholderColor="#999"  Value="{ID}" TextColor="#000" CaretColor="#000" Alignment="Center" FontSize="20"/> 
+		</Rectangle>
+
+		<Rectangle Width="200" Height="50" Color="#E2E2E2" Y="140">
+			<TextInput Row="0" Column="1" PlaceholderText="비밀번호를 입력하세요." PlaceholderColor="#999"  Value="{Password}" TextColor="#000" CaretColor="#000" Alignment="Center" FontSize="20" IsPassword="true"/> 
+		</Rectangle>
+
+
+	<!-- Login Button -->
+		<Panel Width="150" Height="50" Margin="20" Y="170">
+			<Text Value="Log IN" Color="#fff" Alignment="Center" FontSize="20"/>
+			<Rectangle  Color="0.3607843, 0.6705883, 0.9960784, 1" />
+			<Clicked>
+				<Callback Handler="{Signin}"/>
+
+				</Clicked>
+		</Panel>
+
+		<!-- Signup Button -->
+		<Panel Width="150" Height="50" Margin="20" Y="150">
+			<Text Value="Sign UP" Color="#fff" Alignment="Center" FontSize="20"/>
+			<Rectangle  Color="0.3607843, 0.6705883, 0.9960784, 1" />
+			<Clicked>
+				<Callback Handler="{Signup}"/>
+
+				</Clicked>
+		</Panel>
+
+		<Text Value="네이버 아이디로 로그인" Color="#000" X="90" Y="200" FontSize="20"/>
+		<Text Value="페이스북 아이디로 로그인" Color="#000" X="90" Y="210" FontSize="20"/>
+		<Text Value="카카오톡 아이디로 로그인" Color="#000" X="90" Y="220" FontSize="20"/>
+
+
+	</StackPanel>
+
+
+
+</Panel>

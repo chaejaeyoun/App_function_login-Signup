@@ -1,0 +1,14 @@
+<Panel ux:Class="result">
+	<Router ux:Dependency="router" />	
+	<JavaScript File="resultjs.js"/>
+
+	<Circle Width="50" Height="50" Color="0.3607843, 0.6705883, 0.9960784, 1" Y="50" X="30">
+		<Text Value="<" FontSize="80" Y="-20"/>
+		<Clicked>
+			<Callback Handler="{goBack}"/>
+		</Clicked>
+	</Circle>
+
+	<Text Value="성공!!!" FontSize="50" Alignment="Center"/>
+
+</Panel>
