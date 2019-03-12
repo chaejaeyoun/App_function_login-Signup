@@ -16,7 +16,7 @@ var newName = Observable("");
 function Save(){
     console.log('UPID'); //Sign_in 함수가 호출되었는지 확인
 
-	fetch('http://c99ca9a6.ngrok.io/users/signup',{
+	fetch('http://8dc06cfa.ngrok.io/users/signup',{
 	            method: "POST",
 	            headers: {
 	            	"Content-type": "application/json"

@@ -5,14 +5,18 @@ var Password = Observable("");
 
 
 function Signin(){
- 
+	
     // router.push("Home");
     var opts = ({
-            	'username' : userid.value,
-                'password' : password.value
+            	'username' : ID.value,
+                'password' : Password.value
               });
 
-	fetch('http://c99ca9a6.ngrok.io/users/signin',{
+	console.log(JSON.stringify(opts));
+    console.log('sign'); //Sign_in 함수가 호출되었는지 확인
+ 
+
+	fetch('http://8dc06cfa.ngrok.io/users/login',{
 	            method: "POST",
 	            headers: {
 	            	"Content-type": "application/JSON"
@@ -20,15 +24,15 @@ function Signin(){
 	            body : JSON.stringify(opts)
 	               
 	        }).then((res)=>{
-	            console.log(JSON.stringify(res));
-	            console.log(res._bodyInit);
+	            // console.log(JSON.stringify(res));
+	            // console.log(JSON.parse(res));
 	            return res.json()
 			}).then((res)=>{
 
 	            console.log(res.success);
 
 
-	            ID = userid.value;
+	            ID = ID.value;
 
 	            if( JSON.parse(res.success) == true){
 	            	// router.push("Home", ID);
@@ -40,8 +44,7 @@ function Signin(){
 	        }).catch((err)=>{
 	            console.log(err);
 	        });
-   console.log(JSON.stringify(opts));
-   console.log('sign'); //Sign_in 함수가 호출되었는지 확인
+
 }
 
 // function SignClicked(){	
