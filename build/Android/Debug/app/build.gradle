@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+
+configurations { native_implementation }
+
+dependencies {
+    implementation fileTree(dir: 'src/main/libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.drewnoakes:metadata-extractor:2.10.1'
+    
+    
+}
+
+task copySharedLibraries {
+    copy {
+        from '/usr/local/share/uno/Packages/Fuse.Scripting.JavaScript/1.10.0-rc1/V8/lib/Android/libV8Simple.so'
+        into file('src/main/jniLibs/armeabi-v7a')
+    }
+}
+
+// Extracts native libraries from AARs in the native_implementation configuration.
+// This is done so that the NDK can access these libraries.
+task extractNativeLibraries() {
+    doFirst {
+        configurations.native_implementation.files.each { f ->
+            copy {
+                from zipTree(f)
+                into '${buildDir}/native'
+                include 'jni/**/*'
+            }
+        }
+    }
+}
+
+tasks.whenTaskAdded {
+    task-> if (task.name.contains('external') && !task.name.contains('Clean')) {
+//#if #(SharedLibrary:IsRequired)
+        task.dependsOn(copySharedLibraries)
+//#endif
+//#if #(Gradle.Dependency.NativeImplementation:IsRequired)
+//        task.dependsOn(extractNativeLibraries)
+//#endif
+    }
+}
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+android {
+    compileSdkVersion = 26
+    buildToolsVersion = '27.0.3'
+
+    defaultConfig {
+//#if !#(LIBRARY:Defined)
+        applicationId = 'com.apps.app_loginsignup'
+//#endif
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode = 0
+        versionName = '0.0.0'
+        ndk {
+            abiFilters = ['armeabi-v7a']
+        }
+
+        externalNativeBuild {
+            cmake {
+                // The build configuration of the native binary might differ from the build
+                // configuration of the APK. For performance reasons, we don't want to use the
+                // Fuse Simulator on the significantly slower debug binaries, so building debug by
+                // default means we are giving users a bad experience by default. Native debug
+                // binaries are only really useful when actually debugging generated C++ code.
+                // Running 'uno build android --debug' will produce debuggable C++ code.
+                arguments '-DCMAKE_BUILD_TYPE=Release',
+                    '-DANDROID_STL=c++_static',
+                    '-DANDROID_PLATFORM=android-16',
+                    '-DANDROID_TOOLCHAIN=clang',
+                    '-DANDROID_NDK='
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'src/main/CMakeLists.txt'
+        }
+    }
+
+//#if #(Project.Android.Key.Store:IsSet)
+//    signingConfigs {
+//        release {
+//            keyAlias '#(Project.Android.Key.Alias)'
+//            keyPassword '#(Project.Android.Key.AliasPassword)'
+//            storeFile file('#(Project.Android.Key.Store:Path)')
+//            storePassword '#(Project.Android.Key.StorePassword)'
+//        }
+//    }
+//#endif
+
+    buildTypes {
+        release {
+//#if #(DEBUG:Defined)
+            debuggable = true
+//#elif #(Project.Android.Key.Store:IsSet)
+//            signingConfig = signingConfigs.release
+//#endif
+            minifyEnabled = false
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
+    lintOptions {
+        checkReleaseBuilds = false
+    }
+}
+
+

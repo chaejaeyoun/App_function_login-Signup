@@ -1,0 +1,4 @@
+$: -1863758368
+BuildCommand: "bash build.sh"
+RunCommand: "bash run.sh"
+Product: App_Login-Signup.apk
