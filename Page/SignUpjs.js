@@ -10,21 +10,21 @@ function goBack()
 
 
 var newID = Observable("");
-var newPassword = Observable("");
-var Name = Observable("");
+var newPW = Observable("");
+var newName = Observable("");
 
 function Save(){
     console.log('UPID'); //Sign_in 함수가 호출되었는지 확인
 
-	fetch('http://0a232bf2.ngrok.io/users/signup',{
+	fetch('http://c99ca9a6.ngrok.io/users/signup',{
 	            method: "POST",
 	            headers: {
 	            	"Content-type": "application/json"
 	            },
 	            body : JSON.stringify({
 	            	'newid' : newID.value,
-	                'newpw' : newPassword.value,
-	                'newname' : Name.value
+	                'newpw' : newPW.value,
+	                'newname' : newName.value
 	              })
 	        }).then((res)=>{ return res.json()
 	        }).then((res)=>{
@@ -54,8 +54,8 @@ function Save(){
 
 module.exports = {
 	newID : newID,
-	newPassword : newPassword,
-	Name : Name,
+	newPW : newPW,
+	newName : newName,
 	Save : Save,
 	goBack : goBack
 };

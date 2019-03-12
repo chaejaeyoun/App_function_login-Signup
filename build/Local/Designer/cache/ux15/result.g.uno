@@ -2,11 +2,11 @@
 public partial class result: Fuse.Controls.Panel
 {
     readonly Fuse.Navigation.Router router;
-    internal global::Fuse.Reactive.EventBinding temp_eb4;
+    internal global::Fuse.Reactive.EventBinding temp_eb6;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
         "router",
-        "temp_eb4"
+        "temp_eb6"
     };
     static result()
     {
@@ -27,7 +27,7 @@ public partial class result: Fuse.Controls.Panel
         var temp3 = new global::Fuse.Controls.Text();
         var temp4 = new global::Fuse.Gestures.Clicked();
         var temp5 = new global::Fuse.Triggers.Actions.Callback();
-        temp_eb4 = new global::Fuse.Reactive.EventBinding(temp);
+        temp_eb6 = new global::Fuse.Reactive.EventBinding(temp);
         var temp6 = new global::Fuse.Controls.Text();
         this.SourceLineNumber = 1;
         this.SourceFileName = "Page/result.ux";
@@ -53,10 +53,10 @@ public partial class result: Fuse.Controls.Panel
         temp4.SourceLineNumber = 7;
         temp4.SourceFileName = "Page/result.ux";
         temp4.Actions.Add(temp5);
-        temp4.Bindings.Add(temp_eb4);
+        temp4.Bindings.Add(temp_eb6);
         temp5.SourceLineNumber = 8;
         temp5.SourceFileName = "Page/result.ux";
-        temp5.Handler += temp_eb4.OnEvent;
+        temp5.Handler += temp_eb6.OnEvent;
         temp.SourceLineNumber = 8;
         temp.SourceFileName = "Page/result.ux";
         temp6.Value = "성공!!!";
@@ -66,7 +66,7 @@ public partial class result: Fuse.Controls.Panel
         temp6.SourceFileName = "Page/result.ux";
         __g_nametable.This = this;
         __g_nametable.Objects.Add(router);
-        __g_nametable.Objects.Add(temp_eb4);
+        __g_nametable.Objects.Add(temp_eb6);
         this.Children.Add(temp1);
         this.Children.Add(temp2);
         this.Children.Add(temp6);

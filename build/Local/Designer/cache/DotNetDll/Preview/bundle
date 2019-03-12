@@ -57,4 +57,4 @@ Polyfills.Window:js/EventTarget.js:eventtarget-c2230a48.js:js/fetch.js:fetch-bb9
 FuseJS
 Outracks.Simulator.Common.Uno
 Fuse.Preview.Core:fight.png:fight-1537455b.png
-App_Login-Signup:Page/LogInjs.js:loginjs-4e6e393d.js:Page/SignUpjs.js:signupjs-980766a6.js:Page/resultjs.js:resultjs-5a645087.js
+App_Login-Signup:Page/LogInjs.js:loginjs-4e6e393d.js:Page/FacebookLoginjs.js:facebookloginjs-42546e15.js:Page/resultjs.js:resultjs-5a645087.js:Page/SignUpjs.js:signupjs-980766a6.js:Auth.js:auth-2fedd267.js

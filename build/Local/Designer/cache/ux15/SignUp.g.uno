@@ -5,13 +5,13 @@ public partial class SignUp: Fuse.Controls.Panel
     global::Uno.UX.Property<string> temp_Value_inst;
     global::Uno.UX.Property<string> temp1_Value_inst;
     global::Uno.UX.Property<string> temp2_Value_inst;
-    internal global::Fuse.Reactive.EventBinding temp_eb2;
-    internal global::Fuse.Reactive.EventBinding temp_eb3;
+    internal global::Fuse.Reactive.EventBinding temp_eb4;
+    internal global::Fuse.Reactive.EventBinding temp_eb5;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
         "router",
-        "temp_eb2",
-        "temp_eb3"
+        "temp_eb4",
+        "temp_eb5"
     };
     static SignUp()
     {
@@ -32,17 +32,17 @@ public partial class SignUp: Fuse.Controls.Panel
         var temp4 = new global::Fuse.Reactive.Data("newID");
         var temp1 = new global::Fuse.Controls.TextInput();
         temp1_Value_inst = new App_LoginSignup_FuseControlsTextInputControl_Value_Property(temp1, __selector0);
-        var temp5 = new global::Fuse.Reactive.Data("newPassword");
+        var temp5 = new global::Fuse.Reactive.Data("newPW");
         var temp2 = new global::Fuse.Controls.TextInput();
         temp2_Value_inst = new App_LoginSignup_FuseControlsTextInputControl_Value_Property(temp2, __selector0);
-        var temp6 = new global::Fuse.Reactive.Data("Name");
+        var temp6 = new global::Fuse.Reactive.Data("newName");
         var temp7 = new global::Fuse.Reactive.Data("Save");
         var temp8 = new global::Fuse.Reactive.JavaScript(__g_nametable);
         var temp9 = new global::Fuse.Controls.Circle();
         var temp10 = new global::Fuse.Controls.Text();
         var temp11 = new global::Fuse.Gestures.Clicked();
         var temp12 = new global::Fuse.Triggers.Actions.Callback();
-        temp_eb2 = new global::Fuse.Reactive.EventBinding(temp3);
+        temp_eb4 = new global::Fuse.Reactive.EventBinding(temp3);
         var temp13 = new global::Fuse.Controls.Rectangle();
         var temp14 = new global::Fuse.Reactive.DataBinding(temp_Value_inst, temp4, Fuse.Reactive.BindingMode.Default);
         var temp15 = new global::Fuse.Controls.Rectangle();
@@ -54,7 +54,7 @@ public partial class SignUp: Fuse.Controls.Panel
         var temp21 = new global::Fuse.Controls.Rectangle();
         var temp22 = new global::Fuse.Gestures.Clicked();
         var temp23 = new global::Fuse.Triggers.Actions.Callback();
-        temp_eb3 = new global::Fuse.Reactive.EventBinding(temp7);
+        temp_eb5 = new global::Fuse.Reactive.EventBinding(temp7);
         this.SourceLineNumber = 1;
         this.SourceFileName = "Page/SignUp.ux";
         temp8.LineNumber = 3;
@@ -79,10 +79,10 @@ public partial class SignUp: Fuse.Controls.Panel
         temp11.SourceLineNumber = 8;
         temp11.SourceFileName = "Page/SignUp.ux";
         temp11.Actions.Add(temp12);
-        temp11.Bindings.Add(temp_eb2);
+        temp11.Bindings.Add(temp_eb4);
         temp12.SourceLineNumber = 9;
         temp12.SourceFileName = "Page/SignUp.ux";
-        temp12.Handler += temp_eb2.OnEvent;
+        temp12.Handler += temp_eb4.OnEvent;
         temp3.SourceLineNumber = 9;
         temp3.SourceFileName = "Page/SignUp.ux";
         temp13.Color = float4(0.8862745f, 0.8862745f, 0.8862745f, 1f);
@@ -167,16 +167,16 @@ public partial class SignUp: Fuse.Controls.Panel
         temp22.SourceLineNumber = 31;
         temp22.SourceFileName = "Page/SignUp.ux";
         temp22.Actions.Add(temp23);
-        temp22.Bindings.Add(temp_eb3);
+        temp22.Bindings.Add(temp_eb5);
         temp23.SourceLineNumber = 32;
         temp23.SourceFileName = "Page/SignUp.ux";
-        temp23.Handler += temp_eb3.OnEvent;
+        temp23.Handler += temp_eb5.OnEvent;
         temp7.SourceLineNumber = 32;
         temp7.SourceFileName = "Page/SignUp.ux";
         __g_nametable.This = this;
         __g_nametable.Objects.Add(router);
-        __g_nametable.Objects.Add(temp_eb2);
-        __g_nametable.Objects.Add(temp_eb3);
+        __g_nametable.Objects.Add(temp_eb4);
+        __g_nametable.Objects.Add(temp_eb5);
         this.Children.Add(temp8);
         this.Children.Add(temp9);
         this.Children.Add(temp13);

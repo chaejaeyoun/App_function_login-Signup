@@ -4,13 +4,13 @@ public partial class LogIn: Fuse.Controls.Panel
     readonly Fuse.Navigation.Router router;
     global::Uno.UX.Property<string> temp_Value_inst;
     global::Uno.UX.Property<string> temp1_Value_inst;
-    internal global::Fuse.Reactive.EventBinding temp_eb0;
-    internal global::Fuse.Reactive.EventBinding temp_eb1;
+    internal global::Fuse.Reactive.EventBinding temp_eb2;
+    internal global::Fuse.Reactive.EventBinding temp_eb3;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
         "router",
-        "temp_eb0",
-        "temp_eb1"
+        "temp_eb2",
+        "temp_eb3"
     };
     static LogIn()
     {
@@ -44,13 +44,13 @@ public partial class LogIn: Fuse.Controls.Panel
         var temp14 = new global::Fuse.Controls.Rectangle();
         var temp15 = new global::Fuse.Gestures.Clicked();
         var temp16 = new global::Fuse.Triggers.Actions.Callback();
-        temp_eb0 = new global::Fuse.Reactive.EventBinding(temp4);
+        temp_eb2 = new global::Fuse.Reactive.EventBinding(temp4);
         var temp17 = new global::Fuse.Controls.Panel();
         var temp18 = new global::Fuse.Controls.Text();
         var temp19 = new global::Fuse.Controls.Rectangle();
         var temp20 = new global::Fuse.Gestures.Clicked();
         var temp21 = new global::Fuse.Triggers.Actions.Callback();
-        temp_eb1 = new global::Fuse.Reactive.EventBinding(temp5);
+        temp_eb3 = new global::Fuse.Reactive.EventBinding(temp5);
         var temp22 = new global::Fuse.Controls.Text();
         var temp23 = new global::Fuse.Controls.Text();
         var temp24 = new global::Fuse.Controls.Text();
@@ -132,10 +132,10 @@ public partial class LogIn: Fuse.Controls.Panel
         temp15.SourceLineNumber = 19;
         temp15.SourceFileName = "Page/LogIn.ux";
         temp15.Actions.Add(temp16);
-        temp15.Bindings.Add(temp_eb0);
+        temp15.Bindings.Add(temp_eb2);
         temp16.SourceLineNumber = 20;
         temp16.SourceFileName = "Page/LogIn.ux";
-        temp16.Handler += temp_eb0.OnEvent;
+        temp16.Handler += temp_eb2.OnEvent;
         temp4.SourceLineNumber = 20;
         temp4.SourceFileName = "Page/LogIn.ux";
         temp17.Width = new Uno.UX.Size(150f, Uno.UX.Unit.Unspecified);
@@ -159,10 +159,10 @@ public partial class LogIn: Fuse.Controls.Panel
         temp20.SourceLineNumber = 29;
         temp20.SourceFileName = "Page/LogIn.ux";
         temp20.Actions.Add(temp21);
-        temp20.Bindings.Add(temp_eb1);
+        temp20.Bindings.Add(temp_eb3);
         temp21.SourceLineNumber = 30;
         temp21.SourceFileName = "Page/LogIn.ux";
-        temp21.Handler += temp_eb1.OnEvent;
+        temp21.Handler += temp_eb3.OnEvent;
         temp5.SourceLineNumber = 30;
         temp5.SourceFileName = "Page/LogIn.ux";
         temp22.Value = "네이버 아이디로 로그인";
@@ -188,8 +188,8 @@ public partial class LogIn: Fuse.Controls.Panel
         temp24.SourceFileName = "Page/LogIn.ux";
         __g_nametable.This = this;
         __g_nametable.Objects.Add(router);
-        __g_nametable.Objects.Add(temp_eb0);
-        __g_nametable.Objects.Add(temp_eb1);
+        __g_nametable.Objects.Add(temp_eb2);
+        __g_nametable.Objects.Add(temp_eb3);
         this.Children.Add(temp6);
         this.Children.Add(temp7);
     }

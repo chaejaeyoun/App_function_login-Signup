@@ -13,7 +13,7 @@ namespace Outracks.Simulator
 		public GeneratedApplication()
 			: base(
 				new [] 
-				{new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("127.0.0.1"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("10.1.48.145"), 12124)},"/Users/jaeyounchae/Documents/fuse/App_Login-Signup/App_Login-Signup.unoproj",new string[] 
+				{new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("127.0.0.1"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("192.168.0.57"), 12124)},"/Users/jaeyounchae/Documents/fuse/App_Login-Signup/App_Login-Signup.unoproj",new string[] 
 				{ })
 		{
 			Runtime.Bundle.Initialize("App_Login-Signup");

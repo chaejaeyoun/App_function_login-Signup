@@ -70,6 +70,29 @@ public partial class MainView: Fuse.App
         }
         static global::Uno.UX.Selector __selector0 = "result";
     }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template3: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template3(MainView parent, MainView parentInstance): base("FacebookLogin", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template3()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::FacebookLogin(__parent.router);
+            __self.Name = __selector0;
+            __self.SourceLineNumber = 8;
+            __self.SourceFileName = "MainView.ux";
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "FacebookLogin";
+    }
     internal global::Fuse.Navigation.Router router;
     internal global::Fuse.Reactive.FuseJS.DiagnosticsImplModule FuseReactiveFuseJSDiagnosticsImplModule;
     internal global::Fuse.Reactive.FuseJS.Http FuseReactiveFuseJSHttp;
@@ -228,6 +251,7 @@ public partial class MainView: Fuse.App
         var LogIn = new Template(this, this);
         var SignUp = new Template1(this, this);
         var result = new Template2(this, this);
+        var FacebookLogin = new Template3(this, this);
         router.Name = __selector0;
         router.SourceLineNumber = 2;
         router.SourceFileName = "MainView.ux";
@@ -237,6 +261,7 @@ public partial class MainView: Fuse.App
         temp.Templates.Add(LogIn);
         temp.Templates.Add(SignUp);
         temp.Templates.Add(result);
+        temp.Templates.Add(FacebookLogin);
         this.Children.Add(router);
         this.Children.Add(temp);
     }

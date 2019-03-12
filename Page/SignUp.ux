@@ -16,11 +16,11 @@
 	</Rectangle>
 
 	<Rectangle Width="250" Height="50" Color="#E2E2E2" Y="260">
-		<TextInput Row="0" Column="1" PlaceholderText="Password" PlaceholderColor="#999"  Value="{newPassword}" TextColor="#000" CaretColor="#000" Alignment="Center" FontSize="20" IsPassword="true"/> 
+		<TextInput Row="0" Column="1" PlaceholderText="Password" PlaceholderColor="#999"  Value="{newPW}" TextColor="#000" CaretColor="#000" Alignment="Center" FontSize="20" IsPassword="true"/> 
 	</Rectangle>
 
 	<Rectangle Width="250" Height="50" Color="#E2E2E2" Y="330">
-		<TextInput Row="0" Column="1" PlaceholderText="Name" PlaceholderColor="#999"  Value="{Name}" TextColor="#000" CaretColor="#000" Alignment="Center" FontSize="20"/> 
+		<TextInput Row="0" Column="1" PlaceholderText="Name" PlaceholderColor="#999"  Value="{newName}" TextColor="#000" CaretColor="#000" Alignment="Center" FontSize="20"/> 
 	</Rectangle>
 
 	

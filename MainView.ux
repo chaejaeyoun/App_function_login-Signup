@@ -5,6 +5,7 @@
 				<LogIn  ux:Template="LogIn" router="router"/>
 				<SignUp  ux:Template="SignUp" router="router"/>
 				<result  ux:Template="result" router="router"/>
+				<FacebookLogin  ux:Template="FacebookLogin" router="router"/>
 
 	     </Navigator>
 
